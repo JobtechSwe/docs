@@ -108,11 +108,11 @@ Unsuccessful queries will have a response code of:
 
 | HTTP Status code | Reason | Explanation |
 | ------------- | ------------- | -------------|
-| 400 | Bad Request | Something wrong in the query |
-| 401 | Unauthorized | You do not use a valid API key or use it in a wrong way |
-| 404 | Missing ad | The ad you requested is not available |
-| 429 | Rate limit exceeded | You have sent too many requests in a given amount of time |
-| 500 | Internal Server Error | Something wrong on the server side |
+| 400 | Bad Request | Något fel i frågan |
+| 401 | Unauthorized | Du använder inte en giltig API-nyckel eller använder den på fel sätt|
+| 404 | Missing ad | Annonsen du begärde är inte tillgänglig |
+| 429 | Rate limit exceeded | Du har skickat för många förfrågningar på en viss tid|
+| 500 | Internal Server Error | Något fel på serversidan |
 
 
 
