@@ -16,7 +16,7 @@ För arbetsmarknaden är några av de viktigaste datakällorna platsannonser, CV
 
 Frågan aktualiserades under 2018 då Amazons utveckling av ett maskininlärningsbaserat verktyg för bedömning av kandidater visade sig systematiskt toppranka manliga sökande.(1) En annan studie av automatiserade annonsfördelningsverktyg upptäckte att könsbias medförde att verktyget oftare fördelade högavlönade jobberbjudanden till män än till kvinnor.(2)
 
-
+Diskutera i vårt diskussionsforum! (= länk etikkategori i forumet som måste skapas)
 
 **Omdömeskunskap missgynnas särskilt av data-drivna metoder**
 
