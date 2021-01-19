@@ -7,12 +7,12 @@ Ett dåligt exempel innebär tillexempel att du gör en sökning efter alla jobb
 Ett bra exempel innebär att du gör många olika anrop initierade av riktiga användare.
 
 # Innehållsförteckning 
-* [Authentication](#Authentication)
+* [Autentisering ](#Autentisering )
 * [Endpoints](#Endpoints)
-* [Results](#Results)
-* [Errors](#Errors)
-* [Use cases](#Use-cases)
-* [Whats up](#whats-next)
+* [Resultat](#Resultat)
+* [Fel](#Fel)
+* [Användarfall](#Användarfall)
+* [Vad händer](#vad-händer)
 
 
 ## Short introduction
