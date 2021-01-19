@@ -88,15 +88,19 @@ Kodexempel för åtkomst till api finns i 'getting-started-code-examples'
 https://github.com/JobtechSwe/getting-started-code-examples
 
 
-### Jobtech-taxonomi
-If you need help finding the official names for occupations, skills, or geographic locations you will find them in our [Taxonomy API](https://jobtechdev.se/docs/apis/taxonomy/)
+### Jobtech-Taxonomi
+Om du behöver hjälp med att hitta de officiella namnen för yrken, färdigheter eller geografiska platser hittar du dem i vårt Taxonomi API.
 
-## Results
-The results of your queries will be in [JSON](https://en.wikipedia.org/wiki/JSON) format. We won't attempt to explain this attribute by attribute in this document. Instead we've decided to try to include this in the data model which you can find in our [Swagger-GUI](https://jobsearch.api.jobtechdev.se).
+ [Taxonomy API](https://jobtechdev.se/docs/apis/taxonomy/)
 
-Successful queries will have a response code of 200 and give you a result set that consists of:
-1. Some meta data about your search such as number of hits and the time it took to execute the query and 
-2. The ads that matched your search. 
+## Resultat
+Resultaten av dina frågor kommer att vara i  [JSON](https://en.wikipedia.org/wiki/JSON) format. Vi försöker inte förklara attribut för attribut i detta dokument. 
+Istället har vi bestämt oss för att försöka inkludera detta i datamodellen som du hittar i vårt
+[Swagger-GUI](https://jobsearch.api.jobtechdev.se).
+
+Lyckade frågor har en svarskod på 200 och ger dig en resultatuppsättning som består av:
+1. Viss metadata om din sökning, t.ex. antal träffar och den tid det tog att utföra frågan och
+2. Annonserna som matchade din sökning.
 
 
 ## Errors
