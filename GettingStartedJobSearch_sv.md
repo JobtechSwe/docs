@@ -15,40 +15,46 @@ Ett bra exempel innebär att du gör många olika anrop initierade av riktiga an
 * [Vad händer](#vad-händer)
 
 
-## Short introduction
+## Kort introduktion
 
-The endpoints for the ads search API are:
-* [search](#Ad-Search) - returning ads matching a search phrase.
-* [complete](#Typeahead) - returning common words matching a search phrase. Useful for autocomplete.
-* [ad](#Ad) - returning the ad matching an id.
-* [logo](#Logo) - returns the logo for an ad.
+Endponits i API:et är:
+* [search](#Ad-Search) - returnerar annonser som matchar en sökfras.
+* [complete](#Typeahead) - returnerar vanliga ord som matchar en sökfras. Användbar för autocomplete.
+* [ad](#Ad) - returnerar annonsen som matchar ett id.
+* [logo](#Logo) -returnerar logotypen för en annons.
 
-The easiest way to try out the API is to go to the [Swagger-GUI](https://jobsearch.api.jobtechdev.se/).
-But first you need a key to authenticate yourself.
+Det enklaste sättet att testa API: et är att gå till  [Swagger-GUI](https://jobsearch.api.jobtechdev.se/).
+Men först behöver du en nyckel för att autentisera dig själv.
 
-## Authentication
-For this API, you will need to register your own API key at [apirequest.jobtechdev.se](https://apirequest.jobtechdev.se)
+## Autentisering
+För detta API behöver du registrera din egen API-nyckel på [apirequest.jobtechdev.se](https://apirequest.jobtechdev.se)
 
 ## Endpoints
-Below we only show the URL's. If you prefer the curl command, you type it like:
+Nedan visar vi bara webbadresserna. Om du föredrar curl-kommandot skriver du det som:
 
 	curl "{URL}" -H "accept: application/json" -H "api-key: {proper_key}"
 	
 ### Ad search 
 /search?q={search text}
 
-The search endpoint in the first section will return job ads that are currently open for applications.
-The API is meant for searching, we want to offer you the possibility to just build your own customized GUI on top of our free text query field "q" in /search like this ...
+Search endpointen i det första avsnittet returnerar jobbannonser som för närvarande är öppna för ansökan. API: et är avsett för sökning, vi vill erbjuda dig möjligheten att bara bygga ditt eget anpassade GUI ovanpå vårt fritextfält "q" i / search så här ...
 
 	https://jobsearch.api.jobtechdev.se/search?q=Flen
 	
-This means you don't need to worry about how to build an advanced logic to help the users finding the most relevant ads for, let's say, Flen. The search engine will do this for you.
-If you want to narrow down the search result in other ways than the free query offers, you can use the available search filters. Some of the filters need id-keys as input for searching structured data. The ids can be found in the [Taxonomy API](https://jobtechdev.se/docs/apis/taxonomy/). These ids will help you get sharper hits for structured data. We will always work on improving the hits for free queries hoping you'll have less and less use for filtering.
+Det betyder att du inte behöver oroa dig för hur du bygger en avancerad logik för att hjälpa användarna att hitta de mest relevanta annonser för, låt oss säga, Flen. 
+Sökmotorn kommer att göra detta åt dig. 
+Om du vill begränsa sökresultatet på andra sätt än via frisök kan du använda tillgängliga sökfilter. 
+
+Vissa av filtren behöver id som inmatning för att söka strukturerad data. 
+Id finns i  [Taxonomy API](https://jobtechdev.se/docs/apis/taxonomy/). 
+Dessa ID hjälper dig att få skarpare träffar för strukturerad data. 
+Vi kommer alltid att arbeta med att förbättra träffarna för frisökningmed förhoppning om att du får mindre och mindre användning för filtrering.
+
 
 ### Typeahead
 /complete?q={typed string}
 
-If you want to help your end users with term suggestions you can use the typeahead function, which will return common terms found in the job ads. This should work great with an auto complete feature in your search box. If you request ...
+Om du vill hjälpa dina slutanvändare med förslag kan du använda typeahead-funktionen, som returnerar vanliga termer som finns i jobbannonserna. Detta ska fungera bra med en auto completefunktion i din sökruta. Om du begär ...
 
 	https://jobsearch.api.jobtechdev.se/complete?q=stor
 ... you'll get storkök, storhushåll, storesupport, and storage as they are the most common terms starting with "stor*" in ads.
