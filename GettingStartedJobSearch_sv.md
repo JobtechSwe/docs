@@ -57,37 +57,38 @@ Vi kommer alltid att arbeta med att förbättra träffarna för frisökningmed f
 Om du vill hjälpa dina slutanvändare med förslag kan du använda typeahead-funktionen, som returnerar vanliga termer som finns i jobbannonserna. Detta ska fungera bra med en auto completefunktion i din sökruta. Om du begär ...
 
 	https://jobsearch.api.jobtechdev.se/complete?q=stor
-... you'll get storkök, storhushåll, storesupport, and storage as they are the most common terms starting with "stor*" in ads.
+	
+... får du storkök, storhushåll, storesupport och storage eftersom de är de vanligaste termerna som börjar med "stor *" i annonser.
 
-If you have a trailing space in your request
+Om du har ett mellanslag i slutet av begäran
 
 	https://jobsearch.api.jobtechdev.se/complete?q=storage%20s
 
-... you'll get sverige, stockholms län, stockholm, svenska, and script since they are the most common terms beginning with "s" for ads that contain the word "storage"
+... får du sverige, stockholms län, stockholm, svenska och script eftersom de är de vanligaste termerna som börjar med "s" för annonser som innehåller ordet "storage”
 
 ### Ad
 /ad/{id} 
 
-This endpoint is used for fetching specific job ads with all available meta data, by their ad ID number. The ID number can be found by doing a search query.
+Denna endpoint används för att hämta specifika jobbannonser med all tillgänglig metadata, efter deras annons-ID-nummer. ID-numret kan hittas genom att göra en sökfråga.
 
 	https://jobsearch.api.jobtechdev.se/ad/8430129
 
 ### Logo
 /ad/{id}/logo
 
-This endpoint returns the logo for a given ad's id number.
+Den här endpointen returnerar logotypen för en given annons id-nummer.
 
 	https://jobsearch.api.jobtechdev.se/ad/8430129/logo
 
-If no logo exists, a 1x1 pixel size white image is returned.
+Om det inte finns någon logotyp returneras en vit bild på 1x1 pixelstorlek.
 
 
-### Code examples
-Code examples for accessing the api can be found in the 'getting-started-code-examples' repository on Github: 
+### Kodexempel
+Kodexempel för åtkomst till api finns i 'getting-started-code-examples'
 https://github.com/JobtechSwe/getting-started-code-examples
 
 
-### Jobtech-Taxonomy 
+### Jobtech-taxonomi
 If you need help finding the official names for occupations, skills, or geographic locations you will find them in our [Taxonomy API](https://jobtechdev.se/docs/apis/taxonomy/)
 
 ## Results
