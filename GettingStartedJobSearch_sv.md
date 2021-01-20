@@ -134,22 +134,23 @@ För att hjälp dig framåt, så finns några exempel på användarfall:
 
 
 #### Sökning med Wildcard
-
-For some terms the easiest way to find everything you want is through a wildcard search. An example from a user requesting this kind of search was for museum jobs where both searches for "museum" and the various job titles starting with "musei" would be  relevant hits which the information structure currently dont merge very well. From version 1.8.0
+För vissa termer är det enklaste sättet att hitta allt du vill ha genom ett jokertecken. Ett exempel från en användare som begärde denna typ av sökning var för museijobb där både sökningar efter "museum" och de olika jobbtitlar som börjar med "musei" skulle vara relevanta träffar något som informationsstrukturen för närvarande inte slår samman så bra. Från version 1.8.0
 
 Request URL
 	
 	https://jobsearch.api.jobtechdev.se/search?q=muse*
 
-#### Phrase search
-To search in the ad text for a phrase, use the q parameter and surround the phrase with double quotes "this phrase". For a call you'll need to transform " to the HTML code %22.
+#### Frassökning
+För att söka en fras i annonstexten, använd q parametern och skriv frasen inom situationstecken, såhär: "den här frasen"
+För att anropa den behöver du omvanlda till HTML koden %22
 
 Request URL
 
 	https://jobsearch.api.jobtechdev.se/search?q=%22search%20for%20this%20phrase%22
 
-#### Searching for a particular job title
-The easiest way to get the ads that contain a specific word like a job title is to use a free text query (q) with the _search_ endpoint. This will give you ads with the specified word in either headline, ad description or place of work.
+#### Sökning efter en specifik jobtitel
+Enklaste sättet att få annonser som innehåller ett specifikt ord som tillexempel en jobbtitel, är att använda fritext (q) söking tillsammans med  _search_ endpoint.
+Resultatet kommer då att bli annonser som innehåller det specifika ordet i endera rubriken, anninsbeskrivningen eller i arbetsplatsnamnet.
 
 Request URL
 
