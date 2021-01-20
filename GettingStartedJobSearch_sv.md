@@ -17,7 +17,7 @@ Ett bra exempel innebär att du gör många olika anrop initierade av riktiga an
 
 ## Kort introduktion
 
-Endponits i API:et är:
+Endpoints i API:et är:
 * [search](#Ad-Search) - returnerar annonser som matchar en sökfras.
 * [complete](#Typeahead) - returnerar vanliga ord som matchar en sökfras. Användbar för autocomplete.
 * [ad](#Ad) - returnerar annonsen som matchar ett id.
@@ -103,8 +103,8 @@ Lyckade frågor har en svarskod på 200 och ger dig en resultatuppsättning som 
 2. Annonserna som matchade din sökning.
 
 
-## Errors
-Unsuccessful queries will have a response code of:
+## Fel
+Misslyckade frågor får följande responkoder:
 
 | HTTP Status code | Reason | Explanation |
 | ------------- | ------------- | -------------|
@@ -116,23 +116,25 @@ Unsuccessful queries will have a response code of:
 
 
 
-## Use cases 
-To help you find your way forward, here are some example of use cases:
+## Användarfall
+För att hjälp dig framåt, så finns några exempel på användarfall:
 
-* [Searching using Wildcard](#Searching-using-Wildcard)
-* [Phrase search](#Phrase-search)
-* [Searching for a particular job title](#Searching-for-a-particular-job-title)
-* [Searching only within a specific field of work](#Searching-only-within-a-specific-field-of-work)
-* [Filtering employers using organisation number](#Filtering-employers-using-organisation-number)
-* [Finding jobs near you](#Finding-jobs-near-you)
-* [Negative search](#Negative-search)
-* [Finding Swedish speaking jobs abroad](#Finding-Swedish-speaking-jobs-abroad)
+
+* [Sökning med wildcard](#Sökning-med-wildcard)
+* [Fras sökning](#Fras-sökning)
+* [Sökning efter specifik jobbtitel](#Sökning-efter-specifik-jobbtitel)
+* [Sökning inom specifikt arbetsområdet](#Sökning-inom-specifikt-arbetsområde)
+* [Filtrera arbetsgivare utifrån organisationsnummer](#Filtrera-arbetsgivare-utifrån-organisationsnumer)
+* [Hitta jobb nära dig](#Hitta-jobb-nära-dig)
+* [Negativ sökning](#Negativ-sökning)
+* [Hitta svenskspråkiga jobb utomlands](#Hitta-svenskspråkiga-jobb-utomlands)
 * [Customise the result set](#Customise-the-result-set)
-* [Getting all the jobs since date and time](#Getting-all-the-jobs-since-date-and-time)
-* [Simple freetext search](#Simple-freetext-search)
+* [Hämta alla jobb mellan viss tid och datum](#Hämta-alla-jobb-mellan-viss-tid-och-datum)
+* [Enkel fritext sökning](#Enkel-fritext-sökning)
 
 
-#### Searching using Wildcard
+#### Sökning med Wildcard
+
 For some terms the easiest way to find everything you want is through a wildcard search. An example from a user requesting this kind of search was for museum jobs where both searches for "museum" and the various job titles starting with "musei" would be  relevant hits which the information structure currently dont merge very well. From version 1.8.0
 
 Request URL
