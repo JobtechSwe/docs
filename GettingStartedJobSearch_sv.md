@@ -157,8 +157,10 @@ Request URL
 	https://jobsearch.api.jobtechdev.se/search?q=souschef
 
 
-Om du vill vara säker på att annonsen gäller en "souschef" och inte bara namner ordet "souschef" - kan du använda occupation ID i fältet "occupaition".
- If the ad has been registered by the recruiter with the occupation field set to "souschef", the ad will show up in this search. To do this query you use both the [Taxonomy API](https://jobtechdev.se/docs/apis/taxonomy/)  and the _search_ endpoint. First of all, you need to find the occupation ID for "souschef" in the [Taxonomy API](https://jobtechdev.se/docs/apis/taxonomy/)  for the term in the right category (occupation-name).
+Om du vill vara säker på att annonsen gäller en "souschef" och inte bara namner ordet "souschef" - kan du använda "occupation ID" i fältet "occupation".
+Om annonsen har registrerats av arbetsgivaren med "souschef" i fältet "occupation", kommer annonsen visas i denna sökning.
+För att göra denna sökfråga, behöver du använda både [Taxonomy API](https://jobtechdev.se/docs/apis/taxonomy/)  och _search_ endpoint. 
+Först av allt behöver du hitta "occupation ID" för "souschef". Det gör du med hjälp av [Taxonomy API](https://jobtechdev.se/docs/apis/taxonomy/)  for the term in the right category (occupation-name).
 	
 **NB! the old endpoint (~~jobsearch.api.jobtechdev.se/taxonomy/~~) is deprecated and will be removed. Use our [Taxonomy API](https://jobtechdev.se/docs/apis/taxonomy/) instead** 
 
