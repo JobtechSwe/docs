@@ -238,7 +238,7 @@ Request URL
 	https://jobsearch.api.jobtechdev.se/search?q=unix%20-linux
 
 ### Hitta svenskspråkiga jobb utomlands
-Iblan kan ett filter bli för brettoch då är det enklar att använda en negativ sökning för att ta bort specifika resultat som du inte vill ha.
+Ibland kan ett filter bli för brett och då är det enklare att använda en negativ sökning för att ta bort specifika resultat som du inte vill ha.
 I det här fallet visar vi dig hur du kan filtrera bort alla jobb i sverige. Istället för att lägga till ett - tecken i q fältet "-sverige" kan du använda landskoden och country field i sökningen.  Så först letar du rätt på landskoden för sverige i[Taxonomy API](https://jobtechdev.se/docs/apis/taxonomy/) .
 
 Till svar får du conceptId i46j_HmG_v64 för "Sverige" och conceptId zSLA_vw2_FXN för "Svenska".
@@ -260,17 +260,14 @@ I Swagger GUI är det möjligt att användae X-fälten för att definer vilka f�
 
 
 
-### Getting all the jobs since date and time
-A very common use case is COLLECT ALL THE ADS. We don't want you to use the search API for this. It's expensive in terms of band width, CPU cycles and development time and it's not even guaranteed you'll get everything. Instead we'd like you to use our [Stream API](https://jobstream.api.jobtechdev.se).
+### Hämta alla jobb mellan viss tid och datum
+Ett väldigt vanligt abvändarfall är att hämta ALLA ANNONSER. Vi vill inte att du använde Job Search API för detta. Det tar mycket bandbredd, CPU och utvecklingstid och det är inte ens garanterat att du får alla annonser. Om du vill hämta alla annonser rekomenderar vi att du använder [Stream API](https://jobstream.api.jobtechdev.se).
 
 
-### Simple freetext search
-To disable the smart search features of the q-field, set the header `x-feature-disable-smart-freetext` to `true`. The result will be that the q-field will work like a simple text search in the ads' header and description fields.
+### Enkel fritext sökning
+För attinaktivera de smarta sökfunktionerna sätt header `x-feature-disable-smart-freetext` till `true`. Resultatet blir att q fältet kommer att fungera som en enkel textsökning i annonsens rubrik och beskrivningsfält.
 
 
-# Whats next
-What's up for job ads - What we plan working on
+# Vad händer härnäst
+Förutom det ständigt pågående arbetet med att förbättra sök-algoritmen, så jobbar vi just nu på ett statistik API som gällande publicerade annonser och gjorda sökningar.
 
-Besides the forever ongoing work of improving the search algorithm we are right now working on building a statistic API around published ads and made searches. Stay tuned for updates.
-# docs
-Documentation and getting starteds
