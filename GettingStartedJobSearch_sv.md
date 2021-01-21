@@ -48,7 +48,7 @@ Om du vill begränsa sökresultatet på andra sätt än via frisök kan du anvä
 Vissa av filtren behöver id som inmatning för att söka strukturerad data. 
 Id finns i  [Taxonomy API](https://jobtechdev.se/docs/apis/taxonomy/). 
 Dessa ID hjälper dig att få skarpare träffar för strukturerad data. 
-Vi kommer alltid att arbeta med att förbättra träffarna för frisökningmed förhoppning om att du får mindre och mindre användning för filtrering.
+Vi kommer alltid att arbeta med att förbättra träffarna för frisökning med förhoppning om att du får mindre och mindre användning för filtrering.
 
 
 ### Typeahead
