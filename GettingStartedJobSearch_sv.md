@@ -141,8 +141,8 @@ Request URL
 	https://jobsearch.api.jobtechdev.se/search?q=muse*
 
 #### Frassökning
-För att söka en fras i annonstexten, använd q parametern och skriv frasen inom situationstecken, såhär: "den här frasen"
-För att anropa den behöver du omvanlda till HTML koden %22
+För att söka en fras i annonstexten, använd q parametern och skriv frasen inom situationstecken: "den här frasen"
+För att anropa den behöver du omvandla till HTML koden %22
 
 Request URL
 
@@ -170,10 +170,10 @@ Request URL
 	
 	https://jobsearch.api.jobtechdev.se/search?occupation-name=iugg_Qq9_QHH
 	
-det här kommer att ge ett mindre antal resultat men med en högre träffsäkerhet att det verkligen eftersöks en "souschef", men detta resultat kommer troligen att missa några annonser, eftersom fältet occupation-name inte alltid är ifyllt av arbetsgivaren. You should find that a larger set is more useful since there are multiple sorting factors working to show the most relevant hits first. We're also working to always improve the API in regards to unstructured data.
+Det här kommer att ge ett mindre antal resultat men med en högre träffsäkerhet att det verkligen eftersöks en "souschef", men detta resultat kommer troligen att missa en del annonser, eftersom fältet occupation-name inte alltid är ifyllt av arbetsgivaren. Du kommer att upptäcka att ett större set är mer användbart eftersom flera sorteringsfaktorer som arbetar för att visa de mest relevanta träffarna först. Vi jobbar hela tiden för att förbättra APIet när det gäller ostrukturerad data.
 
-### Searching only within a specific field of work
-Firstly, use the [Taxonomy API](https://jobtechdev.se/docs/apis/taxonomy/) to get the Id for Data/IT (occupation field). You'll then make a free text search on the term "IT" narrowing down the search to occupation-field
+### Sökning inom specifikt yrkesområde
+Först, använd [Taxonomy API](https://jobtechdev.se/docs/apis/taxonomy/) för att få Id Data/IT (occupation field). Gör sedan en fritext sökning på "IT" för att specificera sökningen till occupation-fältet.
 
 In the response body you’ll find the conceptId (apaJ_2ja_LuF)for the term Data/IT. Use this with the search endpoint to define the field in which you want to get. So now I want to combine this with my favorite programming language without all those snake related jobs ruining my search.
 
