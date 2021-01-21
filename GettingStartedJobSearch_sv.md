@@ -160,17 +160,17 @@ Request URL
 Om du vill vara säker på att annonsen gäller en "souschef" och inte bara namner ordet "souschef" - kan du använda "occupation ID" i fältet "occupation".
 Om annonsen har registrerats av arbetsgivaren med "souschef" i fältet "occupation", kommer annonsen visas i denna sökning.
 För att göra denna sökfråga, behöver du använda både [Taxonomy API](https://jobtechdev.se/docs/apis/taxonomy/)  och _search_ endpoint. 
-Först av allt behöver du hitta "occupation ID" för "souschef". Det gör du med hjälp av [Taxonomy API](https://jobtechdev.se/docs/apis/taxonomy/)  for the term in the right category (occupation-name).
+Först av allt behöver du hitta "occupation ID" för "souschef". Det gör du med hjälp av [Taxonomy API](https://jobtechdev.se/docs/apis/taxonomy/)  för termen i den högra kategorin (occupation-name).
 	
-**NB! the old endpoint (~~jobsearch.api.jobtechdev.se/taxonomy/~~) is deprecated and will be removed. Use our [Taxonomy API](https://jobtechdev.se/docs/apis/taxonomy/) instead** 
+**OBS! den gamla endpoint (~~jobsearch.api.jobtechdev.se/taxonomy/~~) är utfasad. Använd [Taxonomy API](https://jobtechdev.se/docs/apis/taxonomy/) istället** 
 
-Now you can use the conceptId (iugg_Qq9_QHH) in _search_ to fetch the ads registered with the term "souschef" in the occupation-name field:
+Nu kan du använda conceptId (iugg_Qq9_QHH) i _search_ för att hämta annonser som är registrerade med termen "souschef" i occupation-name fältet:
 
 Request URL
 	
 	https://jobsearch.api.jobtechdev.se/search?occupation-name=iugg_Qq9_QHH
 	
-This will give a smaller result set with a higher certainty of actually being for a "souschef", however the result set will likely miss a few relevant ads since the occupation-name field isn't always set by employers. You should find that a larger set is more useful since there are multiple sorting factors working to show the most relevant hits first. We're also working to always improve the API in regards to unstructured data.
+det här kommer att ge ett mindre antal resultat men med en högre träffsäkerhet att det verkligen eftersöks en "souschef", men detta resultat kommer troligen att missa några annonser, eftersom fältet occupation-name inte alltid är ifyllt av arbetsgivaren. You should find that a larger set is more useful since there are multiple sorting factors working to show the most relevant hits first. We're also working to always improve the API in regards to unstructured data.
 
 ### Searching only within a specific field of work
 Firstly, use the [Taxonomy API](https://jobtechdev.se/docs/apis/taxonomy/) to get the Id for Data/IT (occupation field). You'll then make a free text search on the term "IT" narrowing down the search to occupation-field
