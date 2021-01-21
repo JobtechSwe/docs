@@ -249,12 +249,12 @@ Request URL för att få svenskspråkiga jobb yutanför sverige.
 
 
 ### Anpassa resultatet
-There's a lot of reasons you might want less fields for your search result set. In this case the idea is a map-based job search that plots needles where the jobs can be found based on a user search. Everything needed is the GPS coordinates for the needle and the id, employer, and headline for the ad so more info can be fetched once the user clicks on the needle. Probably, you also like to know total number of ads.
-In the Swagger GUI it's possible to use the X-fields to define which fields to include in result set. This mask will look like this
+Det finns flera anledningar till att du kanske vill ha mindre fält i din resultat lista. I det här fallet är ide´n en sökning som visa jobben på en karta beroende vad användaren söker. Det som behövs är GPS koordinaterna för markeringen på kartan och id, arbetsgivare och rubriken på annonsen så mer information kan hämtas när användare klickar på annonsmarkeringen. Antagligen vill du också vet totala antalet annonser.
+I Swagger GUI är det möjligt att användae X-fälten för att definer vilka fält som ska tas med i resultatet.
 
  	total{value}, hits{id, headline, workplace_address{coordinates}, employer{name}}
 
- This will create an extra header displayed in the curl example in Swagger. So, this example will look like this
+ Det här skapar en extra extra header som visas i curl example i Swagger. Så, det här exemplet kommer att se ut så här:
 
  	curl "https://jobsearch.api.jobtechdev.se/search?q=skogsarbetare" -H "accept: application/json" -H "api-key: <proper_key>" -H "X-Fields: total{value}, hits{id, headline, workplace_address{coordinates}, employer{name}}"
 
