@@ -148,7 +148,7 @@ Request URL
 
 	https://jobsearch.api.jobtechdev.se/search?q=%22search%20for%20this%20phrase%22
 
-#### Sökning efter en specifik jobtitel
+#### Sökning efter en specifik jobbtitel
 Enklaste sättet att få annonser som innehåller ett specifikt ord som tillexempel en jobbtitel, är att använda fritext (q) söking tillsammans med  _search_ endpoint.
 Resultatet kommer då att bli annonser som innehåller det specifika ordet i endera rubriken, anninsbeskrivningen eller i arbetsplatsnamnet.
 
@@ -175,19 +175,20 @@ Det här kommer att ge ett mindre antal resultat men med en högre träffsäkerh
 ### Sökning inom specifikt yrkesområde
 Först, använd [Taxonomy API](https://jobtechdev.se/docs/apis/taxonomy/) för att få Id Data/IT (occupation field). Gör sedan en fritext sökning på "IT" för att specificera sökningen till occupation-fältet.
 
-In the response body you’ll find the conceptId (apaJ_2ja_LuF)for the term Data/IT. Use this with the search endpoint to define the field in which you want to get. So now I want to combine this with my favorite programming language without all those snake related jobs ruining my search.
+I svaret hittar du conceptId (apaJ_2ja_LuF)för termen Data/IT. Använd detta tilsammans med "search" endpoint för att definera vad du vill ha.
+Så nu vill jag kombinera det här med mitt favorit programmeringsspråk utan alla liknande jobb förstör min sökning.
 
 Request URL
 
 	https://jobsearch.api.jobtechdev.se/search?occupation-field=apaJ_2ja_LuF&q=python
 	
-In a similar way, you can use the [Taxonomy API](https://jobtechdev.se/docs/apis/taxonomy/) to find conceptIds for the parameters _occupation-group_ and _occupation-collection_
+På liknande sätt kan du använda [Taxonomy API](https://jobtechdev.se/docs/apis/taxonomy/) för att hitta conceptId för parametrarna  _occupation-group_ och _occupation-collection_
 
-_occupation-collection_ can be used in combination with _occupation-name_, _occupation-field_ and _occupation-group_ and the search will show ads that are in ALL (AND condition between parameters)
+_occupation-collection_ kan användas i kombination med _occupation-name_, _occupation-field_ och _occupation-group_ och sökningen kommer att visa annonser som finns i alla.
 
 	
-### Filtering employers using organisation number
-If you want to list all the jobs with just one employer you can use the swedish organisation number from Bolagsverket. For example its possible to take Arbetsförmedlingens number 2021002114 and basically use that as a filter
+### Filtrera arbetsgivare utifrån organisationsnummer
+Om du vill ista all job hos en specifik arbetsgivare kan du använda det svenska organisationsnummret från Bolagsverket.Tillexempel är det möjligt att ta Arbetsförmedlingens nummer 2021002114 helt enkelt använda det som ett filter.
 
 Request URL
 	
