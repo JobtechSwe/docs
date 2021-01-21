@@ -211,26 +211,27 @@ Request URL
 
 	https://jobsearch.api.jobtechdev.se/search?country=QJgN_Zge_BzJ
 
-If I make a query which includes 2 different geographical filters the most local one will be promoted. As in this case where I'm searching for "lärare" using the municipality code for Haparanda (tfRE_hXa_eq7) and the region code for Norrbottens Län (9hXe_F4g_eTG). The jobs that are in Haparanda will be the first ones in the result set.
+Om du gör en sökning med två geografiska filterm kommer den mest lokala att visas först. Som i detta fall, du söker efter lärare och använde kommunkoden för Haparanda (tfRE_hXa_eq7) och regionskoden för Norbottens län (9hXe_F4g_eTG). Jobben som finns i Haparanda kommer att vara de som visas först i listan. 
 
 	https://jobsearch.api.jobtechdev.se/search?municipality=tfRE_hXa_eq7&region=9hXe_F4g_eTG&q=l%C3%A4rare
 
 
-You can also use latitude, longitude coordinates and a radius in kilometers if you want.
+Du kan också använda latitude, longitude koordinater och radie i kilometer om du vill.
 
 Request URL
 
 	https://jobsearch.api.jobtechdev.se/search?position=59.3,17.6&position.radius=10
 
 
-### Negative search
-So, this is very simple using our q-field. Let's say you want to find Unix jobs
+### Negativ sökning
+Så, det här är väldigt enkelt om du använder q-fältet. Tillexempel, du vill hitta Unix jobb.
 
 Request URL
 
 	https://jobsearch.api.jobtechdev.se/search?q=unix
 
-But you find that you get a lot of jobs expecting you to work with Linux which you don't want. All that's needed is to use the minus symbol and the word you want to exclude.
+Men du upptäcker att du får flera träffas för Linux jobb, vilket du inte alls vill. Det enda du behöver göra är att sätta ett - tecken och det ord du vill utesluta
+
 
 Request URL
 
