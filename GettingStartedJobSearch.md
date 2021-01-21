@@ -226,6 +226,14 @@ As return we get conceptId i46j_HmG_v64 for "Sverige" and conceptId zSLA_vw2_FXN
 Request URL to get jobs in Swedish outside Sweden
 
 	https://jobsearch.api.jobtechdev.se/search?language=zSLA_vw2_FXN&country=-i46j_HmG_v64
+	
+### Using the abroad filter
+The abroad filter is created so its possible to have jobs from other countries appear in a search where you're also filtering for specific parts of Sweden. Since jobs in other countries don't have structured data for region or municipality they will always be filtered out if any parameters like that are used in the search since its impossible to include them by using existing fields other than country. This can make it hard to construct logical filters in a GUI saying something like "Jobs outside of Sweden". By setting the filter to true you will allow your search terms to find ads with other contry codes than sweden but no region or municipality code present. In the example we will look for jobs within the Stockholm region but also including jobs abroad. 
+
+Request URL
+
+	https://jobsearch.api.jobtechdev.se/search?region=CifL_Rzy_Mku&abroad=true&offset=0&limit=0
+
 
 
 ### Customise the result set

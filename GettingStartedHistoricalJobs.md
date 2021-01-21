@@ -1,6 +1,6 @@
-# Historical Jobs 2006-2019
+# Historical Jobs 2006-2020
 
-This dataset consists of 6.3M job postings (11.7M job positions) published on Platsbanken from the year 2006 up to and including 2019.
+This dataset consists of 6.7M job postings (12.5M job positions) published on Platsbanken from the year 2006 up to and including 2020.
 
 Texts have been anonymized with sentences including names, telephone numbers and email addresses removed. Each listing contains metadata on location, dates, employer name, job type and any additional job details.
 
@@ -13,6 +13,6 @@ Later year ad objects contain more attributes than earlier. Values of attributes
 
 ## Downloads
 
-All: [2006-2019.zip](https://simonbe.blob.core.windows.net/afhistorik/pb2006_2019.zip) [4.6 GB]
+All: [2006-2020.rar](https://simonbe.blob.core.windows.net/afhistorik/pb_2006_2020.rar) [2.3 GB]
 
-By year: [2006.zip](https://minio.arbetsformedlingen.se/historiska-annonser/2006.zip), [2007.zip](https://minio.arbetsformedlingen.se/historiska-annonser/2007.zip), [2008.zip](https://minio.arbetsformedlingen.se/historiska-annonser/2008.zip), [2009.zip](https://minio.arbetsformedlingen.se/historiska-annonser/2009.zip), [2010.zip](https://minio.arbetsformedlingen.se/historiska-annonser/2010.zip), [2011.zip](https://minio.arbetsformedlingen.se/historiska-annonser/2011.zip), [2012.zip](https://minio.arbetsformedlingen.se/historiska-annonser/2012.zip), [2013.zip](https://minio.arbetsformedlingen.se/historiska-annonser/2013.zip), [2014.zip](https://minio.arbetsformedlingen.se/historiska-annonser/2014.zip), [2015.zip](https://minio.arbetsformedlingen.se/historiska-annonser/2015.zip), [2016.zip](https://minio.arbetsformedlingen.se/historiska-annonser/2016.zip), [2017.zip](https://minio.arbetsformedlingen.se/historiska-annonser/2017.zip), [2018.zip](https://minio.arbetsformedlingen.se/historiska-annonser/2018.zip), [2019.zip](https://minio.arbetsformedlingen.se/historiska-annonser/2019.zip), [2020_partial.zip](https://minio.arbetsformedlingen.se/historiska-annonser/2020_partial.zip) (last update: 2020-11-24)
+By year: [2006.rar](https://minio.arbetsformedlingen.se/historiska-annonser/2006.rar), [2007.rar](https://minio.arbetsformedlingen.se/historiska-annonser/2007.rar), [2008.rar](https://minio.arbetsformedlingen.se/historiska-annonser/2008.rar), [2009.rar](https://minio.arbetsformedlingen.se/historiska-annonser/2009.rar), [2010.rar](https://minio.arbetsformedlingen.se/historiska-annonser/2010.rar), [2011.rar](https://minio.arbetsformedlingen.se/historiska-annonser/2011.rar), [2012.rar](https://minio.arbetsformedlingen.se/historiska-annonser/2012.rar), [2013.rar](https://minio.arbetsformedlingen.se/historiska-annonser/2013.rar), [2014.rar](https://minio.arbetsformedlingen.se/historiska-annonser/2014.rar), [2015.rar](https://minio.arbetsformedlingen.se/historiska-annonser/2015.rar), [2016.rar](https://minio.arbetsformedlingen.se/historiska-annonser/2016.rar), [2017.rar](https://minio.arbetsformedlingen.se/historiska-annonser/2017.rar), [2018.rar](https://minio.arbetsformedlingen.se/historiska-annonser/2018.rar), [2019.rar](https://minio.arbetsformedlingen.se/historiska-annonser/2019.rar), [2020.rar](https://minio.arbetsformedlingen.se/historiska-annonser/2020.rar)
