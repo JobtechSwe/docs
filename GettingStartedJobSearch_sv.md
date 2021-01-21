@@ -128,7 +128,7 @@ För att hjälp dig framåt, så finns några exempel på användarfall:
 * [Hitta jobb nära dig](#Hitta-jobb-nära-dig)
 * [Negativ sökning](#Negativ-sökning)
 * [Hitta svenskspråkiga jobb utomlands](#Hitta-svenskspråkiga-jobb-utomlands)
-* [Customise the result set](#Customise-the-result-set)
+* [Anpassa resultatet](#Anpassa-resultatet)
 * [Hämta alla jobb mellan viss tid och datum](#Hämta-alla-jobb-mellan-viss-tid-och-datum)
 * [Enkel fritext sökning](#Enkel-fritext-sökning)
 
@@ -188,7 +188,7 @@ _occupation-collection_ kan användas i kombination med _occupation-name_, _occu
 
 	
 ### Filtrera arbetsgivare utifrån organisationsnummer
-Om du vill ista all job hos en specifik arbetsgivare kan du använda det svenska organisationsnummret från Bolagsverket.Tillexempel är det möjligt att ta Arbetsförmedlingens nummer 2021002114 helt enkelt använda det som ett filter.
+Om du vill lista alla jobb hos en specifik arbetsgivare kan du använda det svenska organisationsnummret från Bolagsverket.Tillexempel är det möjligt att ta Arbetsförmedlingens nummer 2021002114 helt enkelt använda det som ett filter.
 
 Request URL
 	
@@ -230,24 +230,25 @@ Request URL
 
 	https://jobsearch.api.jobtechdev.se/search?q=unix
 
-Men du upptäcker att du får flera träffas för Linux jobb, vilket du inte alls vill. Det enda du behöver göra är att sätta ett - tecken och det ord du vill utesluta
+Men du upptäcker att du får flera träffar för Linux jobb, vilket du inte alls vill. Det enda du behöver göra är att sätta ett - tecken och det ord du vill utesluta
 
 
 Request URL
 
 	https://jobsearch.api.jobtechdev.se/search?q=unix%20-linux
 
-### Finding Swedish speaking jobs abroad
-Sometimes a filter can work too broadly and then it's easier to use a negative search to remove specific results you don't want. In this case we will show you how to filter out all the jobs in Sweden. Rather than adding a minus Sweden in the q field "-sverige" you can use the country code and the country field in the search. So first you get the country code for "Sverige" from the [Taxonomy API](https://jobtechdev.se/docs/apis/taxonomy/) .
+### Hitta svenskspråkiga jobb utomlands
+Iblan kan ett filter bli för brettoch då är det enklar att använda en negativ sökning för att ta bort specifika resultat som du inte vill ha.
+I det här fallet visar vi dig hur du kan filtrera bort alla jobb i sverige. Istället för att lägga till ett - tecken i q fältet "-sverige" kan du använda landskoden och country field i sökningen.  Så först letar du rätt på landskoden för sverige i[Taxonomy API](https://jobtechdev.se/docs/apis/taxonomy/) .
 
-As return we get conceptId i46j_HmG_v64 for "Sverige" and conceptId zSLA_vw2_FXN for "Svenska".
+Till svar får du conceptId i46j_HmG_v64 för "Sverige" och conceptId zSLA_vw2_FXN för "Svenska".
 
-Request URL to get jobs in Swedish outside Sweden
+Request URL för att få svenskspråkiga jobb yutanför sverige.
 
 	https://jobsearch.api.jobtechdev.se/search?language=zSLA_vw2_FXN&country=-i46j_HmG_v64
 
 
-### Customise the result set
+### Anpassa resultatet
 There's a lot of reasons you might want less fields for your search result set. In this case the idea is a map-based job search that plots needles where the jobs can be found based on a user search. Everything needed is the GPS coordinates for the needle and the id, employer, and headline for the ad so more info can be fetched once the user clicks on the needle. Probably, you also like to know total number of ads.
 In the Swagger GUI it's possible to use the X-fields to define which fields to include in result set. This mask will look like this
 
