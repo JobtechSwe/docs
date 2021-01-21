@@ -182,7 +182,7 @@ Request URL
 
 	https://jobsearch.api.jobtechdev.se/search?occupation-field=apaJ_2ja_LuF&q=python
 	
-På liknande sätt kan du använda [Taxonomy API](https://jobtechdev.se/docs/apis/taxonomy/) för att hitta conceptId för parametrarna  _occupation-group_ och _occupation-collection_
+På liknande sätt kan du använda [Taxonomy API](https://jobtechdev.se/docs/apis/taxonomy/) för att hitta conceptId för parametrarna  _occupation-group_ och _occupation-collection_.
 
 _occupation-collection_ kan användas i kombination med _occupation-name_, _occupation-field_ och _occupation-group_ och sökningen kommer att visa annonser som finns i alla.
 
@@ -194,18 +194,18 @@ Request URL
 	
 	https://jobsearch.api.jobtechdev.se/search?employer=2021002114
 	
-The filter makes a preix search as a default, like a wild card search without the need for an asterix. So a good example of the usefulness of this is to take advantage of the fact that all governmental employers in sweden have org numbers that start with a 2. So you could make a request for Java jobs within the public sector like this.
+Filtret gör en prefix sökning som default, ungefär som en sökning med "wild card" utan att du behöver ange en asterix. Så ett gott exempel av användbarheten är fördelena att alla statliga arbetsgivare i sverige, har ett organisationsnummer som börjar med 2. Så du kan göra en förfrågan för Java jobb i den offentliga sektor så här:
 
 Request URL
 
 	https://jobsearch.api.jobtechdev.se/search?employer=2&q=java
 
 
-### Finding jobs near you
-You can filter your search on geographical terms picked up from the Taxonomy just the same way you can with occupation-titles and occupation-fields. (Concept_id doesn't work everywhere at the time of writing but you can use the numeral id's, they are very official and way less likely to change as skills and occupations sometimes do)
-If you want to search for jobs in Norway you can find the conceptId for "Norge" in the [Taxonomy API](https://jobtechdev.se/docs/apis/taxonomy/) 
+### Hitta jobb nära dig
+Du kan filtrera på geografiska termer som du hämtat från Taxonomi APIet på samma sätt som du kan med occupation-titles och occupation-fields. (Concept_id fungerar inte överallt önnu, men du kan använda de numeriska id'n de är oficiella och risken är liten att de förändras, som färdigheter och yrken ibland gör.
+Om du vill söka efter jobb i norge, kan du hitta conceptId för "Norge" i [Taxonomy API](https://jobtechdev.se/docs/apis/taxonomy/) 
 
-And add that parameter conceptId (QJgN_Zge_BzJ) to the country field
+Och lägga till parametern conceptId (QJgN_Zge_BzJ) i country fältet.
 
 Request URL
 
