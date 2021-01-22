@@ -16,13 +16,11 @@ För arbetsmarknaden är några av de viktigaste datakällorna platsannonser, CV
 
 Frågan aktualiserades under 2018 då Amazons utveckling av ett maskininlärningsbaserat verktyg för bedömning av kandidater visade sig systematiskt toppranka manliga sökande.(1) En annan studie av automatiserade annonsfördelningsverktyg upptäckte att könsbias medförde att verktyget oftare fördelade högavlönade jobberbjudanden till män än till kvinnor.(2)
 
-Diskutera i vårt diskussionsforum! [https://forum.jobtechdev.se/](https://forum.jobtechdev.se/)
 
 **Omdömeskunskap missgynnas särskilt av data-drivna metoder**
 
 Arbetsgivare söker ofta efter omdömeskunskap i relation till vad verksamheten behöver. Efterfrågad omdömeskunskap är oftast beroende av en viss verksamhetskontext, men de uttrycks sällan explicit i dataunderlaget. Därför är det svårt att fånga dem för datadrivna matchningsmetoder. Textanalysverktyg och datadrivna modeller utgår från att innebörden av ord kan hämtas direkt från den lingvistiska kontexten. De ignorerar därmed andra kontexter som är faktamässigt relevanta.
 
-Diskutera i vårt diskussionsforum! [https://forum.jobtechdev.se/](https://forum.jobtechdev.se/)
 
 **Promiskuös användning av personinformation från rekrytering**
 
@@ -30,13 +28,11 @@ Bemanningsbranschen samlar idag in mängder av information om arbetssökande. F�
 
 Informationen som sparas begränsas delvis av GDPR och genom den sökandes samtycke. Frågor har dock väckts om detta skydd är tillräckligt eftersom den arbetssökande befinner sig i en utsatt situation. Underförstått krävs ett samtycke från individen för att hen ska ha möjlighet att få jobbet.
 
-Diskutera i vårt diskussionsforum! [https://forum.jobtechdev.se/](https://forum.jobtechdev.se/)
 
 **Karriärkompetens och digitalt utanförskap**
 
 Karriärkompetens, inklusive kunskap om arbetsmarknaden och hur rekrytering går till, är avgörande för att både hitta ett lämpligt jobb och lyckas bli anställd. Rekryteringen förändras av ny digital teknik: matchningsalgoritmer, AI, VR, sociala medier, rekryteringssystem, mm påverkar i allt större grad rekryteringen. Det innebär att kunskap om hur dessa tekniker fungerar blir viktig för att lyckas i jobbsökandet. Men möjligheten att få tillgång till relevant kunskap försvåras delvis av problemen med det som brukar benämnas algoritmisk transparens. Idag saknar i regel de flesta rekryteringssajter öppen information om hur deras digitala matchningsmetoder går till.
 
-Diskutera i vårt diskussionsforum! [https://forum.jobtechdev.se/](https://forum.jobtechdev.se/)
 
 **Otydligt ansvar när data-drivna modeller går fel**
 
