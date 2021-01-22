@@ -15,7 +15,7 @@ Senare års annonsobjekt innehåller fler attribut än tidigare. Värden för at
 
 ## Ladda ner
 
-Alla: [2006-2020.rar](https://simonbe.blob.core.windows.net/afhistorik/pb_2006_2020.rar) [2.3 GB]
+Alla: [2006-2020](https://simonbe.blob.core.windows.net/afhistorik/pb_2006_2020.rar) [RAR-fil, 2.3 GB] / [2006-2020](https://simonbe.blob.core.windows.net/afhistorik/pb_2006_2020.zip) [ZIP-fil, 5.1 GB] 
 
 År för år: [2006.rar](https://minio.arbetsformedlingen.se/historiska-annonser/2006.rar), [2007.rar](https://minio.arbetsformedlingen.se/historiska-annonser/2007.rar), [2008.rar](https://minio.arbetsformedlingen.se/historiska-annonser/2008.rar), [2009.rar](https://minio.arbetsformedlingen.se/historiska-annonser/2009.rar), [2010.rar](https://minio.arbetsformedlingen.se/historiska-annonser/2010.rar), [2011.rar](https://minio.arbetsformedlingen.se/historiska-annonser/2011.rar), [2012.rar](https://minio.arbetsformedlingen.se/historiska-annonser/2012.rar), [2013.rar](https://minio.arbetsformedlingen.se/historiska-annonser/2013.rar), [2014.rar](https://minio.arbetsformedlingen.se/historiska-annonser/2014.rar), [2015.rar](https://minio.arbetsformedlingen.se/historiska-annonser/2015.rar), [2016.rar](https://minio.arbetsformedlingen.se/historiska-annonser/2016.rar), [2017.rar](https://minio.arbetsformedlingen.se/historiska-annonser/2017.rar), [2018.rar](https://minio.arbetsformedlingen.se/historiska-annonser/2018.rar), [2019.rar](https://minio.arbetsformedlingen.se/historiska-annonser/2019.rar), [2020.rar](https://minio.arbetsformedlingen.se/historiska-annonser/2020.rar)
 
