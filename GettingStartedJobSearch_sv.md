@@ -54,13 +54,13 @@ Vi kommer alltid att arbeta med att förbättra träffarna för frisökning med 
 ### Typeahead
 /complete?q={typed string}
 
-Om du vill hjälpa dina slutanvändare med förslag kan du använda typeahead-funktionen, som returnerar vanliga termer som finns i jobbannonserna. Detta ska fungera bra med en auto completefunktion i din sökruta. Om du begär ...
+Om du vill hjälpa dina slutanvändare med förslag kan du använda typeahead-funktionen, som returnerar vanliga termer som finns i jobbannonserna. Detta ska fungera bra med en auto completefunktion i din sökruta. Om du gör en request för ...
 
 	https://jobsearch.api.jobtechdev.se/complete?q=stor
 	
 ... får du storkök, storhushåll, storesupport och storage eftersom de är de vanligaste termerna som börjar med "stor *" i annonser.
 
-Om du har ett mellanslag i slutet av begäran
+Om du har ett mellanslag i slutet av 
 
 	https://jobsearch.api.jobtechdev.se/complete?q=storage%20s
 
@@ -110,7 +110,7 @@ Misslyckade frågor får följande responkoder:
 | ------------- | ------------- | -------------|
 | 400 | Bad Request | Något fel i frågan |
 | 401 | Unauthorized | Du använder inte en giltig API-nyckel eller använder den på fel sätt|
-| 404 | Missing ad | Annonsen du begärde är inte tillgänglig |
+| 404 | Missing ad | Annonsen du försökte hämta är inte tillgänglig |
 | 429 | Rate limit exceeded | Du har skickat för många förfrågningar på en viss tid|
 | 500 | Internal Server Error | Något fel på serversidan |
 
@@ -202,7 +202,7 @@ Request URL
 
 
 ### Hitta jobb nära dig
-Du kan filtrera på geografiska termer som du hämtat från Taxonomi APIet på samma sätt som du kan med occupation-titles och occupation-fields. (Concept_id fungerar inte överallt önnu, men du kan använda de numeriska id'n de är oficiella och risken är liten att de förändras, som färdigheter och yrken ibland gör.
+Du kan filtrera på geografiska termer som du hämtat från Taxonomi APIet på samma sätt som du kan med occupation-titles och occupation-fields. (Concept_id fungerar inte överallt ännu, men du kan använda  numeriska id'n som är oficiella och risken är liten att de förändras, som färdigheter och yrken ibland gör.
 Om du vill söka efter jobb i norge, kan du hitta conceptId för "Norge" i [Taxonomy API](https://jobtechdev.se/docs/apis/taxonomy/) 
 
 Och lägga till parametern conceptId (QJgN_Zge_BzJ) i country fältet.
@@ -211,7 +211,7 @@ Request URL
 
 	https://jobsearch.api.jobtechdev.se/search?country=QJgN_Zge_BzJ
 
-Om du gör en sökning med två geografiska filterm kommer den mest lokala att visas först. Som i detta fall, du söker efter lärare och använde kommunkoden för Haparanda (tfRE_hXa_eq7) och regionskoden för Norbottens län (9hXe_F4g_eTG). Jobben som finns i Haparanda kommer att vara de som visas först i listan. 
+Om du gör en sökning med två geografiska filter kommer den mest lokala att visas först. Som i detta fall, du söker efter lärare och använde kommunkoden för Haparanda (tfRE_hXa_eq7) och regionskoden för Norbottens län (9hXe_F4g_eTG). Jobben som finns i Haparanda kommer att vara de som visas först i listan. 
 
 	https://jobsearch.api.jobtechdev.se/search?municipality=tfRE_hXa_eq7&region=9hXe_F4g_eTG&q=l%C3%A4rare
 
@@ -249,12 +249,12 @@ Request URL för att få svenskspråkiga jobb yutanför sverige.
 
 
 ### Anpassa resultatet
-Det finns flera anledningar till att du kanske vill ha mindre fält i din resultat lista. I det här fallet är ide´n en sökning som visa jobben på en karta beroende vad användaren söker. Det som behövs är GPS koordinaterna för markeringen på kartan och id, arbetsgivare och rubriken på annonsen så mer information kan hämtas när användare klickar på annonsmarkeringen. Antagligen vill du också vet totala antalet annonser.
-I Swagger GUI är det möjligt att användae X-fälten för att definer vilka fält som ska tas med i resultatet.
+Det finns flera anledningar till att du kanske vill ha mindre fält i din resultatlista. I det här fallet är idén en sökning som visar jobben på en karta beroende vad användaren söker. Det som behövs är GPS koordinaterna för markeringen på kartan och id, arbetsgivare och rubriken på annonsen så mer information kan hämtas när användare klickar på annonsmarkeringen. Antagligen vill du också vet totala antalet annonser.
+I Swagger GUI är det möjligt att använda X-fälten för att definera vilka fält som ska tas med i resultatet.
 
  	total{value}, hits{id, headline, workplace_address{coordinates}, employer{name}}
 
- Det här skapar en extra extra header som visas i curl example i Swagger. Så, det här exemplet kommer att se ut så här:
+ Det här skapar en extra header som visas i curl example i Swagger. Så, det här exemplet kommer att se ut så här:
 
  	curl "https://jobsearch.api.jobtechdev.se/search?q=skogsarbetare" -H "accept: application/json" -H "api-key: <proper_key>" -H "X-Fields: total{value}, hits{id, headline, workplace_address{coordinates}, employer{name}}"
 
@@ -265,9 +265,9 @@ Ett väldigt vanligt abvändarfall är att hämta ALLA ANNONSER. Vi vill inte at
 
 
 ### Enkel fritext sökning
-För attinaktivera de smarta sökfunktionerna sätt header `x-feature-disable-smart-freetext` till `true`. Resultatet blir att q fältet kommer att fungera som en enkel textsökning i annonsens rubrik och beskrivningsfält.
+För att inaktivera de smarta sökfunktionerna sätt header `x-feature-disable-smart-freetext` till `true`. Resultatet blir att q fältet kommer att fungera som en enkel textsökning i annonsens rubrik och beskrivningsfält.
 
 
 # Vad händer härnäst
-Förutom det ständigt pågående arbetet med att förbättra sök-algoritmen, så jobbar vi just nu på ett statistik API som gällande publicerade annonser och gjorda sökningar.
+Förutom det ständigt pågående arbetet med att förbättra sök-algoritmen, så jobbar vi på ett söktrends API om publicerade annonser och gjorda sökningar.
 
