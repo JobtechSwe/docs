@@ -1,13 +1,12 @@
 # Search API for job links - getting started
 
-The aim of this text is to walk you through what you're seeing in the [Swagger-GUI](https://jobsearch.api.jobtechdev.se) to give you a bit of orientation on what can be done with the Job Search API. If you are just looking for a way to fetch all ads please use our [Stream API](https://jobtechdev.se/docs/apis/jobstream/)
+The aim of this text is to walk you through what you're seeing in the [Swagger-GUI](https://links.api.jobtechdev.se) to give you a bit of orientation on what can be done with the Job Search API. If you are just looking for a way to fetch all ads please use our [Stream API](https://jobtechdev.se/docs/apis/jobstream/)
 The search API is intended for user search not downloading all job ads. We may invalidate your API Key if you make excessive amounts of calls that don't fit the intended purpose of this API.
 
 A bad practice typically means searching for every job of every region every fifth minute.
 A good practice means making lots of varied calls initiated by real users.
 
 # Table of Contents
-* [Authentication](#Authentication)
 * [Endpoints](#Endpoints)
 * [Results](#Results)
 * [Errors](#Errors)
@@ -21,7 +20,7 @@ The endpoints for the ads search API are:
 * [search](#Ad-Search) - returning ads matching a search phrase.
 * [ad](#Ad) - returning the ad matching an id.
 
-The easiest way to try out the API is to go to the [Swagger-GUI](https://jobsearch.api.jobtechdev.se/).
+The easiest way to try out the API is to go to the [Swagger-GUI](https://links.api.jobtechdev.se).
 
 
 
@@ -36,7 +35,7 @@ Below we only show the URL's. If you prefer the curl command, you type it like:
 The search endpoint in the first section will return job ads that are currently open for applications.
 The API is meant for searching, we want to offer you the possibility to just build your own customized GUI on top of our free text query field "q" in /search like this ...
 
-	https://joblinks-api-cicd.prod.services.jtech.se/joblinks?q=Flen
+	https://links.api.jobtechdev.se/joblinks?q=Flen
 	
 This means you don't need to worry about how to build an advanced logic to help the users finding the most relevant ads for, let's say, Flen. The search engine will do this for you.
 If you want to narrow down the search result in other ways than the free query offers, you can use the available search filters. Some of the filters need id-keys as input for searching structured data. The ids can be found in the [Taxonomy API](https://jobtechdev.se/docs/apis/taxonomy/). These ids will help you get sharper hits for structured data. We will always work on improving the hits for free queries hoping you'll have less and less use for filtering.
@@ -47,7 +46,7 @@ If you want to narrow down the search result in other ways than the free query o
 
 This endpoint is used for fetching specific job ads with all available meta data, by their ad ID number. The ID number can be found by doing a search query.
 
-	https://jobsearch.api.jobtechdev.se/ad/8430129
+	https://links.api.jobtechdev.se/ad/8430129
 
 
 ### Code examples
@@ -97,21 +96,21 @@ For some terms the easiest way to find everything you want is through a wildcard
 
 Request URL
 	
-	https://joblinks-api-cicd.prod.services.jtech.se/joblinks?q=muse*
+	https://links.api.jobtechdev.se/joblinks?q=muse*
 
 #### Phrase search
 To search in the ad text for a phrase, use the q parameter and surround the phrase with double quotes (%22).
 
 Request URL
 
-	https://joblinks-api-cicd.prod.services.jtech.se/joblinks?q=%22search%20for%20this%20phrase%22
+	https://links.api.jobtechdev.se/joblinks?q=%22search%20for%20this%20phrase%22
 
 #### Searching for a particular job title
 The easiest way to get the ads that contain a specific word like a job title is to use a free text query (q) with the _search_ endpoint. This will give you ads with the specified word in either headline, ad description or place of work.
 
 Request URL
 
-	https://joblinks-api-cicd.prod.services.jtech.se/joblinks?q=souschef
+	https://links.api.jobtechdev.se/joblinks?q=souschef
 
 
 If you want to be certain that the ad is for a "souschef" - and not just mentions a "souschef" - you can use the occupation ID in the field "occupation". If the ad has been registered by the recruiter with the occupation field set to "souschef", the ad will show up in this search. To do this query you use both the [Taxonomy API](https://jobtechdev.se/docs/apis/taxonomy/)  and the _search_ endpoint. First of all, you need to find the occupation ID for "souschef" in the [Taxonomy API](https://jobtechdev.se/docs/apis/taxonomy/)  for the term in the right category (occupation-name).
@@ -122,7 +121,7 @@ Now you can use the conceptId (iugg_Qq9_QHH) in _search_ to fetch the ads regist
 
 Request URL
 	
-	https://joblinks-api-cicd.prod.services.jtech.se/joblinks?occupation-name=iugg_Qq9_QHH
+	https://links.api.jobtechdev.se/joblinks?occupation-name=iugg_Qq9_QHH
 	
 This will give a smaller result set with a higher certainty of actually being for a "souschef", however the result set will likely miss a few relevant ads since the occupation-name field isn't always set by employers. You should find that a larger set is more useful since there are multiple sorting factors working to show the most relevant hits first. We're also working to always improve the API in regards to unstructured data.
 
@@ -133,7 +132,7 @@ In the response body you’ll find the conceptId (apaJ_2ja_LuF)for the term Data
 
 Request URL
 
-	https://joblinks-api-cicd.prod.services.jtech.se/joblinks?occupation-field=apaJ_2ja_LuF&q=python
+	https://links.api.jobtechdev.se/joblinks?occupation-field=apaJ_2ja_LuF&q=python
 	
 In a similar way, you can use the [Taxonomy API](https://jobtechdev.se/docs/apis/taxonomy/) to find conceptIds for the parameters _occupation-group_ and _occupation-collection_
 
@@ -145,13 +144,13 @@ If you want to list all the jobs with just one employer you can use the swedish 
 
 Request URL
 	
-	https://joblinks-api-cicd.prod.services.jtech.se/joblinks?employer=2021002114
+	https://links.api.jobtechdev.se/joblinks?employer=2021002114
 	
-The filter makes a preix search as a default, like a wild card search without the need for an asterix. So a good example of the usefulness of this is to take advantage of the fact that all governmental employers in sweden have org numbers that start with a 2. So you could make a request for Java jobs within the public sector like this.
+The filter makes a prefix search as a default, like a wild card search without the need for an asterix. So a good example of the usefulness of this is to take advantage of the fact that all governmental employers in sweden have org numbers that start with a 2. So you could make a request for Java jobs within the public sector like this.
 
 Request URL
 
-	https://joblinks-api-cicd.prod.services.jtech.se/joblinks?employer=2&q=java
+	https://links.api.jobtechdev.se/joblinks?employer=2&q=java
 
 
 ### Finding jobs near you
@@ -162,11 +161,11 @@ And add that parameter conceptId (QJgN_Zge_BzJ) to the country field
 
 Request URL
 
-	https://joblinks-api-cicd.prod.services.jtech.se/joblinks?country=QJgN_Zge_BzJ
+	https://links.api.jobtechdev.se/joblinks?country=QJgN_Zge_BzJ
 
 If I make a query which includes 2 different geographical filters the most local one will be promoted. As in this case where I'm searching for "lärare" using the municipality code for Haparanda (tfRE_hXa_eq7) and the region code for Norrbottens Län (9hXe_F4g_eTG). The jobs that are in Haparanda will be the first ones in the result set.
 
-	https://joblinks-api-cicd.prod.services.jtech.se/joblinks?municipality=tfRE_hXa_eq7&region=9hXe_F4g_eTG&q=l%C3%A4rare
+	https://links.api.jobtechdev.se/joblinks?municipality=tfRE_hXa_eq7&region=9hXe_F4g_eTG&q=l%C3%A4rare
 
 
 
@@ -176,13 +175,13 @@ So, this is very simple using our q-field. Let's say you want to find Unix jobs
 
 Request URL
 
-	https://joblinks-api-cicd.prod.services.jtech.se/joblinks?q=unix
+	https://links.api.jobtechdev.se/joblinks?q=unix
 
 But you find that you get a lot of jobs expecting you to work with which you don't want. All that's needed is to use the minus symbol and the word you want to exclude.
 
 Request URL
 
-	https://joblinks-api-cicd.prod.services.jtech.se/joblinks?q=unix%20-linux
+	https://links.api.jobtechdev.se/joblinks?q=unix%20-linux
 
 ### Finding Swedish speaking jobs abroad
 Sometimes a filter can work too broadly and then it's easier to use a negative search to remove specific results you don't want. In this case we will show you how to filter out all the jobs in Sweden. Rather than adding a minus Sweden in the q field "-sverige" you can use the country code and the country field in the search. So first you get the country code for "Sverige" from the [Taxonomy API](https://jobtechdev.se/docs/apis/taxonomy/) .
@@ -191,11 +190,7 @@ As return we get conceptId i46j_HmG_v64 for "Sverige" and conceptId zSLA_vw2_FXN
 
 Request URL to get jobs in Swedish outside Sweden
 
-	https://joblinks-api-cicd.prod.services.jtech.se/joblinks?language=zSLA_vw2_FXN&country=-i46j_HmG_v64
-
-
-### Getting all the jobs since date and time
-A very common use case is COLLECT ALL THE ADS. We don't want you to use the search API for this. It's expensive in terms of band width, CPU cycles and development time and it's not even guaranteed you'll get everything. Instead we'd like you to use our [Stream API](https://jobstream.api.jobtechdev.se).
+	https://links.api.jobtechdev.se/joblinks?language=zSLA_vw2_FXN&country=-i46j_HmG_v64
 
 
 
