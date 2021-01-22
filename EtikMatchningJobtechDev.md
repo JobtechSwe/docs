@@ -38,7 +38,7 @@ Karriärkompetens, inklusive kunskap om arbetsmarknaden och hur rekrytering går
 
 Kopplat till algoritmisk transparens finns frågan om ansvarstagande, s.k.  _algorithmic accountability_.(3) Ett rekryteringssystem som genom maskininlärning successivt justerar vem som får vilket jobb, och vad som avgör vem som får vilket jobb, har sällan en enstaka felkritisk systemdel (single-point-of-failure). När något går fel blir det därför en fråga om att fördela ansvar över en mängd aktörer. Vem bär egentligen ansvaret när ett algoritmstyrt beslut resulterar i diskriminerande eller orättvisa konsekvenser?  Juridiken är ofta inte i fas med utvecklingen, vilket försvårar ansvarsutkrävandet. (4)
 
-Diskutera etik och digital matchning i vårt diskussionsforum! [https://forum.jobtechdev.se/](https://forum.jobtechdev.se/)
+[Diskutera etik och digital matchning i vårt diskussionsforum!](https://forum.jobtechdev.se/)
 
 
 
