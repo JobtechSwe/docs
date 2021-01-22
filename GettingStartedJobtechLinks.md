@@ -1,13 +1,12 @@
 # Search API for job links - getting started
 
-The aim of this text is to walk you through what you're seeing in the [Swagger-GUI](https://jobsearch.api.jobtechdev.se) to give you a bit of orientation on what can be done with the Job Search API. If you are just looking for a way to fetch all ads please use our [Stream API](https://jobtechdev.se/docs/apis/jobstream/)
+The aim of this text is to walk you through what you're seeing in the [Swagger-GUI](https://links.api.jobtechdev.se) to give you a bit of orientation on what can be done with the Job Search API. If you are just looking for a way to fetch all ads please use our [Stream API](https://jobtechdev.se/docs/apis/jobstream/)
 The search API is intended for user search not downloading all job ads. We may invalidate your API Key if you make excessive amounts of calls that don't fit the intended purpose of this API.
 
 A bad practice typically means searching for every job of every region every fifth minute.
 A good practice means making lots of varied calls initiated by real users.
 
 # Table of Contents
-* [Authentication](#Authentication)
 * [Endpoints](#Endpoints)
 * [Results](#Results)
 * [Errors](#Errors)
@@ -21,7 +20,7 @@ The endpoints for the ads search API are:
 * [search](#Ad-Search) - returning ads matching a search phrase.
 * [ad](#Ad) - returning the ad matching an id.
 
-The easiest way to try out the API is to go to the [Swagger-GUI](https://jobsearch.api.jobtechdev.se/).
+The easiest way to try out the API is to go to the [Swagger-GUI](https://links.api.jobtechdev.se).
 
 
 
@@ -47,7 +46,7 @@ If you want to narrow down the search result in other ways than the free query o
 
 This endpoint is used for fetching specific job ads with all available meta data, by their ad ID number. The ID number can be found by doing a search query.
 
-	https://jobsearch.api.jobtechdev.se/ad/8430129
+	https://links.api.jobtechdev.se/ad/8430129
 
 
 ### Code examples
@@ -147,7 +146,7 @@ Request URL
 	
 	https://links.api.jobtechdev.se/joblinks?employer=2021002114
 	
-The filter makes a preix search as a default, like a wild card search without the need for an asterix. So a good example of the usefulness of this is to take advantage of the fact that all governmental employers in sweden have org numbers that start with a 2. So you could make a request for Java jobs within the public sector like this.
+The filter makes a prefix search as a default, like a wild card search without the need for an asterix. So a good example of the usefulness of this is to take advantage of the fact that all governmental employers in sweden have org numbers that start with a 2. So you could make a request for Java jobs within the public sector like this.
 
 Request URL
 
