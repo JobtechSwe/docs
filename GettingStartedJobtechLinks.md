@@ -193,9 +193,5 @@ Request URL to get jobs in Swedish outside Sweden
 	https://links.api.jobtechdev.se/joblinks?language=zSLA_vw2_FXN&country=-i46j_HmG_v64
 
 
-### Getting all the jobs since date and time
-A very common use case is COLLECT ALL THE ADS. We don't want you to use the search API for this. It's expensive in terms of band width, CPU cycles and development time and it's not even guaranteed you'll get everything. Instead we'd like you to use our [Stream API](https://jobstream.api.jobtechdev.se).
-
-
 
 
