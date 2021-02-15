@@ -204,6 +204,12 @@ Request URL
 
 	https://jobsearch.api.jobtechdev.se/search?position=59.3,17.6&position.radius=10
 
+### Finding jobs where you can work remotely
+Using the 'remote' parameter allows you to search for jobs that have a higher likelihood of allowing you to work remotely
+
+	https://jobsearch.api.jobtechdev.se/search?remote=true
+
+
 
 ### Negative search
 So, this is very simple using our q-field. Let's say you want to find Unix jobs
