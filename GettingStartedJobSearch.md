@@ -206,6 +206,10 @@ Request URL
 
 ### Finding jobs where you can work remotely
 Using the 'remote' parameter allows you to search for jobs that have a higher likelihood of allowing you to work remotely
+based on phrases associated with remote work / working from home.  
+
+True will only show ads that match  
+False will only show ads that DO NOT match these phrases
 
 	https://jobsearch.api.jobtechdev.se/search?remote=true
 
